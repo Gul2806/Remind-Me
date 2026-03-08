@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "MyRemindMeApp",
+    "slug": "MyRemindMeApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/rem.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#19b6be"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.company.myremindmeapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "FOREGROUND_SERVICE",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO"
+      ],
+      "useNextNotificationsApi": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
+      },
+      "usesCleartextTraffic": true,
+      "googleServicesFile": "./google-services.json",
+      "enableHermes": false
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "platforms": ["ios", "android", "web"],
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/messaging",
+      "expo-notifications"
+    ],
+    "notification": {
+      "icon": "./assets/notification.png",
+      "color": "#ffffff",
+      "androidMode": "default",
+      "iosDisplayInForeground": true,
+      "androidCollapsedTitle": "New reminders from MyRemindMeApp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5b71eba2-3c97-4e04-8a8d-e394fcab740d"
+      }
+    },
+    "owner": "gulraizzia"
+  }
+}
